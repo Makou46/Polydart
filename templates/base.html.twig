@@ -50,5 +50,53 @@
             </div>
           </nav>
           {% block body %}{% endblock %}
+          <footer class="site-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <h6>À propos</h6>
+                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent vel nisi non urna congue tempus ac id sapien. Class aptent taciti sociosqu
+                    ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque in enim eget
+                    enim consequat aliquam et sit amet sem. Quisque semper odio et eros consectetur gravida.
+                    Fusce faucibus libero accumsan tellus mattis, non fringilla augue egestas. Pellentesque
+                    imperdiet faucibus massa ut gravida. Maecenas elit purus, placerat id pharetra et, vulputate
+                    eu metus. Etiam dui risus, sollicitudin et ipsum et,
+                    venenatis maximus nisi. Sed imperdiet bibendum sollicitudin.</p>
+                </div>
+        
+                <div class="col-xs-6 col-md-3">
+                  <h6>Categories</h6>
+                  <ul class="footer-links">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./presentation.html">présentation</a></li>
+                    <li><a href="./oeuvres.html">Oeuvres</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+                </div>
+                <hr>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2012 All Rights Reserved by
+                      <a href="#">Polydart</a>.
+                      {% if is_granted('ROLE_ADMIN') %}
+                      <a href="{{ path('admin') }}">Admin</a>
+                      {% endif %}
+                    </p>
+                  </div>
+        
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                      <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                      <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </footer>
     </body>
 </html>

@@ -67,16 +67,10 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $addresse_codepostal;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $mdp;
-
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="users")
-     */
-    private $produit;
+    public function __toString()
+    {
+        return $this->prenom." ".$this->nom;
+    }
 
     public function getId(): ?int
     {
@@ -237,31 +231,5 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
         $this->addresse_codepostal = $addresse_codepostal;
 
         return $this;
-    }
-
-    public function getMdp(): ?string
-    {
-        return $this->mdp;
-    }
-
-    public function setMdp(string $mdp): self
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
-    
-
-    public function getProduit(): ?produit
-    {
-        return $this->produit;
-    }
-
-    public function setProduit(?produit $produit): self
-    {
-        $this->produit = $produit;
-
-        return $this;
-    }
+    }    
 }

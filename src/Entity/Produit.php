@@ -19,8 +19,13 @@ class Produit
      */
     private $id;
 
-    /**
+  /**
      * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="integer", length=255)
      */
     private $quantite;
 
@@ -30,7 +35,7 @@ class Produit
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="integer", length=10)
      */
     private $prix;
 
@@ -38,11 +43,6 @@ class Produit
      * @ORM\Column(type="string", length=255)
      */
     private $images;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Users::class, mappedBy="produit")
-     */
-    private $users;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="produits")
@@ -59,6 +59,13 @@ class Produit
      */
     private $Transaction;
 
+  
+
+    public function __toString()
+    {
+        return $this->description." ".$this->nom;;
+    }
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -69,12 +76,12 @@ class Produit
         return $this->id;
     }
 
-    public function getQuantite(): ?string
+    public function getQuantite(): ?int
     {
         return $this->quantite;
     }
 
-    public function setQuantite(string $quantite): self
+    public function setQuantite(int $quantite): self
     {
         $this->quantite = $quantite;
 
@@ -93,12 +100,12 @@ class Produit
         return $this;
     }
 
-    public function getPrix(): ?string
+    public function getPrix(): ?int
     {
         return $this->prix;
     }
 
-    public function setPrix(string $prix): self
+    public function setPrix(int $prix): self
     {
         $this->prix = $prix;
 
@@ -113,36 +120,6 @@ class Produit
     public function setImages(string $images): self
     {
         $this->images = $images;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Users>
-     */
-    public function getUsers(): Collection
-    {
-        return $this->users;
-    }
-
-    public function addUser(Users $user): self
-    {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-            $user->setProduit($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUser(Users $user): self
-    {
-        if ($this->users->removeElement($user)) {
-            // set the owning side to null (unless already changed)
-            if ($user->getProduit() === $this) {
-                $user->setProduit(null);
-            }
-        }
 
         return $this;
     }
@@ -179,6 +156,18 @@ class Produit
     public function setTransaction(?Transaction $Transaction): self
     {
         $this->Transaction = $Transaction;
+
+        return $this;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
 
         return $this;
     }

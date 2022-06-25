@@ -33,7 +33,7 @@ class MessageContact
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="string", length=100)
      */
     private $telephone;
 
