@@ -34,21 +34,34 @@
     </div>
 
     <div class="container">
-        <div class="container_grid wrapper-realisation aos-init aos-animate" data-aos="fade-up">
-            <div class="box1"><img class="photos_chats" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="box2"><img class="photos_chats" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="box3"><img class="photos_chats" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-        </div>
-
-        <div class="btn-acheter">
-            <button type="button" class="btn mt-5 mb-5"><a href="./payement.html">Voir + </a></button>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel_card active">
+                    {% for produit in produits %}
+                    <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ produit.nom }}</h4>
+                                <p class="card-text">{{ produit.description }}</p>
+                                <button class="btn my-2 my-sm-0" type="submit"><a href="{{ path('app_produit', {id: produit.id}) }}">Voir
+                                        +</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
-
-
 </section>
 
 
@@ -56,66 +69,36 @@
     <div class="mt-5 mb-5 titre-h3">
         <h2>Lorem ipsum dolor sit amet </h2>
     </div>
-
     <div class="container">
-        <div class="container1">
-            <div class="chat1"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="chat2"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="chat3"><img class="photos_chats1" style="height: 100%;object-fit: cover;"
-                    src="./src/img/photo_chat.jpg" alt=""></div>
-            <div class="chat4"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="chat5"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-        </div>
-
-        <div class="btn-acheter">
-            <button type="button" class="btn mt-5 mb-5"><a href="./payement.html">Voir + </a></button>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel_card active">
+                    {% for produit in produits %}
+                    <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ produit.nom }}</h4>
+                                <p class="card-text">{{ produit.description }}</p>
+                                <button class="btn my-2 my-sm-0" type="submit"><a href="{{ path('app_produit', {id: produit.id}) }}">Voir
+                                        +</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-
-
 </section>
-<br>
-<br>
-<section>
-    <div class="mt-5 mb-5 titre-h3">
-        <h2>Lorem ipsum dolor sit amet </h2>
-    </div>
-    <div class="container">
-        <div class="container2">
-            <div class="all1"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all2"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all3"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all4"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all5"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all6"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all7"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all8"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all9"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all10"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all11"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-            <div class="all12"><img class="photos_chats1" src="./src/img/photo_chat.jpg" alt=""><a
-                    href="./produit.html"></a></div>
-        </div>
-        <div class="btn-acheter">
-            <button type="button" class="btn mt-5 mb-5"><a href="./payement.html">Voir + </a></button>
-        </div>
-    </div>
 </section>
 <a id="button" href="#top" class="back_to_top"><img src="./src/img/arrow-up.svg" alt="fleche"></a>
 {% endblock %}
