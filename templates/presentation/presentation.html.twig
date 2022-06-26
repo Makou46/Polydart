@@ -3,18 +3,469 @@
 {% block title %}Hello PresentationController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/polydart/src/Controller/PresentationController.php'|file_link(0) }}">src/Controller/PresentationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/polydart/templates/presentation/index.html.twig'|file_link(0) }}">templates/presentation/index.html.twig</a></code></li>
-    </ul>
+<section>
+    <div class="mt-5 mb-5 titre-h3">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipis </h2>
+    </div>
+
+    <div class="container_home">
+        <div class="container_home_left1 col-4">
+            <h1>lorem</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor orci metus,
+                a bibendum mauris dapibus ac. Mauris in porta purus. Integer et eros non quam varius
+                tempor ut id ligula. Aenean id tincidunt diam. In diam dolor, rutrum at metus et, consectetur
+                mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas. Aenean eu mauris vitae velit gravida bibendum at a nisl.</p>
+        </div>
+        <div class="container_home_right"><img src="./src/img/photo_chat.jpg" style="border-radius: 3%;" alt="#">
+        </div>
+    </div>
+
+</section>
+
+<div class="container my-4">
+    <br class="mt-5 mb-5">
+    <hr class="mb-5 mt-5" />
+    <br class="mt-5 mb-5">
 </div>
+
+
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel_card active">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="{{ path('') }}">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre2</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel_card ">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre2</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container my-4">
+    <br class="mt-5 mb-5">
+    <hr class="mb-5 mt-5" />
+    <br class="mt-5 mb-5">
+</div>
+
+
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel_card active">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre2</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel_card ">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre2</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container my-4">
+    <br class="mt-5 mb-5">
+    <hr class="mb-5 mt-5" />
+    <br class="mt-5 mb-5">
+</div>
+
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel_card active">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre2</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel_card ">
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre2</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="float:left">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Titre</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make
+                                up the bulk of the
+                                card's content.</p>
+                            <button class="btn my-2 my-sm-0" type="submit"><a href="./payement.html">Voir
+                                    +</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<section>
+    <div class="mt-5 mb-5 container_home">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor orci metus,
+            a bibendum mauris dapibus ac. Mauris in porta purus. Integer et eros non quam varius
+            tempor ut id ligula. Aenean id tincidunt diam. In diam dolor, rutrum at metus et, consectetur
+            mattis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+            egestas. Aenean eu mauris vitae velit gravida bibendum at a nisl. Vestibulum viverra sagittis urna
+            , eget euismod neque rhoncus egestas. Integer in metus elit. Donec non neque erat. Donec tincidunt
+            ex nec quam mollis, ac pulvinar augue ullamcorper. Nulla vitae nulla semper,
+            interdum massa sagittis, iaculis felis. Sed iaculis ligula vitae malesuada pharetra.</p>
+    </div>
+</section>
 {% endblock %}

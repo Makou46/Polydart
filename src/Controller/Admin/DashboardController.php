@@ -58,7 +58,10 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         return [
+            MenuItem::section('menu'),
             MenuItem::linkToDashboard('Dashboard', 'fa fa-bars'),
+            MenuItem::section(''), 
+            MenuItem::section('Contenu'),
             MenuItem::linkToCrud('Polydart', 'fa fa-house-user', Polydart::class),
             MenuItem::linkToCrud('Users', 'fa fa-user', Users::class),
             MenuItem::linkToCrud('Produits', 'fa fa-box', Produit::class),
@@ -66,7 +69,10 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('messageContact', 'fa fa-envelope', MessageContact::class),
             MenuItem::linkToCrud('Series', 'fa fa-user', Series::class),
             MenuItem::linkToCrud('Transaction', 'fa fa-dollar-sign', Transaction::class),
-            MenuItem::linkToUrl('Homepage', 'fas fa-home', $this->generateUrl('app_main')),    
+            MenuItem::section(''),
+            MenuItem::section('Accueil'),
+            MenuItem::linkToUrl('Homepage', 'fas fa-home', $this->generateUrl('app_main')),
+            MenuItem::section(''),    
         ];
         
     }

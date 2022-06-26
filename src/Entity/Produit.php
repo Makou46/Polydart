@@ -5,10 +5,13 @@ namespace App\Entity;
 use App\Repository\ProduitRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
+ * @Vich\Uploadable
  */
 class Produit
 {
@@ -43,6 +46,16 @@ class Produit
      * @ORM\Column(type="string", length=255)
      */
     private $images;
+
+    /**
+     * @var mixed
+    * @Assert\File(
+     *     maxSize = "1024k",
+     *     mimeTypes = {"image/jpeg", "image/png"}
+     * )
+     * @Vich\UploadableField(mapping="products", fileNameProperty="images")
+     */
+    private $imageFile;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="produits")
@@ -168,6 +181,30 @@ class Produit
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of imageFile
+     *
+     * @return  mixed
+     */ 
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * Set the value of imageFile
+     *
+     * @param  mixed  $imageFile
+     *
+     * @return  self
+     */ 
+    public function setImageFile($imageFile)
+    {
+        $this->imageFile = $imageFile;
 
         return $this;
     }
