@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        {% block stylesheets %}
+            
+        {% endblock %}
+        
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        
+        <nav id="top" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand ml-5" href="./index.html"><img src="./src/img/logo_polydart.png" style="width: 70px;"
+                  alt="logo_polydart"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto navbar-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ path('app_main') }}">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ path('app_presentation') }}">Présentation</a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_produits') }}">Oeuvres</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex mr-5">
+                  <button class="btn btn-principal  my-2 my-sm-0" type="submit"><a
+                      href="{{ path('app_register') }}">Connexion</a></button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          {% block body %}{% endblock %}
+          <footer class="site-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <h6>À propos</h6>
+                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent vel nisi non urna congue tempus ac id sapien. Class aptent taciti sociosqu
+                    ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque in enim eget
+                    enim consequat aliquam et sit amet sem. Quisque semper odio et eros consectetur gravida.
+                    Fusce faucibus libero accumsan tellus mattis, non fringilla augue egestas. Pellentesque
+                    imperdiet faucibus massa ut gravida. Maecenas elit purus, placerat id pharetra et, vulputate
+                    eu metus. Etiam dui risus, sollicitudin et ipsum et,
+                    venenatis maximus nisi. Sed imperdiet bibendum sollicitudin.</p>
+                </div>
+        
+                <div class="col-xs-6 col-md-3">
+                  <h6>Categories</h6>
+                  <ul class="footer-links">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./presentation.html">présentation</a></li>
+                    <li><a href="./oeuvres.html">Oeuvres</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+                </div>
+                <hr>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2012 All Rights Reserved by
+                      <a href="#">Polydart</a>.
+                      {% if is_granted('ROLE_ADMIN') %}
+                      <a href="{{ path('admin') }}">Admin</a>
+                      {% endif %}
+                    </p>
+                  </div>
+        
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                      <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                      <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </footer>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitsController!{% endblock %}
+
+{% block body %}
+
+<section class="mt-5 mb-5">
+    <div class="section">
+      <div class="image">
+        <img src="./src/img/photo_chat2.jpg" alt="" />
+      </div>
+      <div class="desc">
+        <h2>{{ produits.nom|raw }}</h2>
+        <h3>description</h3>
+        <hr />
+        <p style="width: fit-content;word-break:break-all">{{ produits.description|striptags('')|raw }}</p>
+        <hr />
+
+        <div class="tags">
+          <a href="#">Bois</a>
+          <a href="#">Pierre</a>
+          <a href="#">Argile</a>
+        </div>
+        <hr />
+
+        <div class="price">
+          <h3>{{ produits.quantite|raw }}</h3>
+          <h3>{{ produits.prix|raw }}€ TTC</h3>
+        </div>
+        <div class="btn"><a href="#">COMMANDER</a></div>
+      </div>
+    </div>
+  </section>
+
+
+
+<a id="button" href="#top" class="back_to_top"><img src="./src/img/arrow-up.svg" alt="fleche"></a>
+{% endblock %}

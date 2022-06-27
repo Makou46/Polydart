@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitsController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<section>
+    <div class="mt-5 mb-5 titre-h3">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipis </h2>
+    </div>
+    <div class="mt-5 mb-5 container">
+        <p style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipis
+            Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet,
+            consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum
+            dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur
+            adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit
+            amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem
+            ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur
+            adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet,
+            consectetur adipis Lorem ipsum dolor sit amet,
+            consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis </p>
+    </div>
+
+
+</section>
+
+<section>
+    <div class="mt-5 mb-5 titre-h3">
+        <h2>Lorem ipsum dolor sit amet </h2>
+    </div>
+
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel_card active">
+                    {% for produit in produits %}
+                    <div class="col-md-3" style="float:left">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="./src/img/photo_chat.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ produit.nom|raw }}</h4>
+                                <p class="card-text">{{ produit.description|raw }}</p>
+                                <button class="btn my-2 my-sm-0" type="submit"><a href="{{ path('app_produit', {id: produit.id}) }}">Voir
+                                        +</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a id="button" href="#top" class="back_to_top"><img src="./src/img/arrow-up.svg" alt="fleche"></a>
+{% endblock %}

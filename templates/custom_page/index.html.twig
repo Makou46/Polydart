@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CustomPage index{% endblock %}
+
+{% block body %}
+    <h1>CustomPage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>Content</th>
+                <th>Url</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for custom_page in custom_pages %}
+            <tr>
+                <td>{{ custom_page.id }}</td>
+                <td>{{ custom_page.title }}</td>
+                <td>{{ custom_page.createdAt ? custom_page.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ custom_page.updatedAt ? custom_page.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ custom_page.content }}</td>
+                <td>{{ custom_page.url }}</td>
+                <td>
+                    <a href="{{ path('app_custom_page_show', {'id': custom_page.id}) }}">show</a>
+                    <a href="{{ path('app_custom_page_edit', {'id': custom_page.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_custom_page_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="mt-5 mb-5 titre-h3">
+    <h2>Prendre contact</h2>
+  </div>
+
+  <div class="container">
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Prénom</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Nom</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Adresse</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="exemple@gmail.com">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Ville</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Pays</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>France</option>
+          <option>Belgique</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Votre Message...</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn mt-5 mb-5"><a href="./payement.html">Envoyer</a></button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
