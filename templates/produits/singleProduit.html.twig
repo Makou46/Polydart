@@ -7,7 +7,7 @@
 <section class="mt-5 mb-5">
     <div class="section">
       <div class="image">
-        <img src="./src/img/photo_chat2.jpg" alt="" />
+        <img class="imageProduit" src="{{ vich_uploader_asset(produits,'imageFile') }}" alt="" />
       </div>
       <div class="desc">
         <h2>{{ produits.nom|raw }}</h2>
@@ -17,9 +17,10 @@
         <hr />
 
         <div class="tags">
-          <a href="#">Bois</a>
-          <a href="#">Pierre</a>
-          <a href="#">Argile</a>
+
+          
+          <a href="#">{{ produits.category }}</a>
+         
         </div>
         <hr />
 

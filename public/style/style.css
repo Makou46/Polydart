@@ -271,6 +271,11 @@ nav {
     transition: all 0,3;
 }
 
+.imageProduit {
+  width: 400px !important;
+  margin-left: 100px;
+}
+
 .btn a:hover {
   background-color: #FF7878;
   transform: scale(1.1);
@@ -281,6 +286,8 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+
 
 input[type="checkbox"] {
   position: relative;

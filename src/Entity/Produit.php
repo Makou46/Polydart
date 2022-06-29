@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
  * @Vich\Uploadable
+ * @ORM\Table(name="produit", indexes={@ORM\Index(columns={"nom", "description"}, flags={"fulltext"})})
  */
 class Produit
 {
@@ -113,6 +114,19 @@ class Produit
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
+
+    public function getShortDescription(): ?string
+    {
+        if (strlen($this->description) < 40) {
+            return $this->description;
+        }
+
+        return substr($this->description, 0, 40) . '...';
+    }
+    
     public function getPrix(): ?int
     {
         return $this->prix;

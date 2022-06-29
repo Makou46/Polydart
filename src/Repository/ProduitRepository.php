@@ -21,6 +21,26 @@ class ProduitRepository extends ServiceEntityRepository
         parent::__construct($registry, Produit::class);
     }
 
+    /**
+     * Recherche les annonces en fonction du formulaire
+     * @return void
+     */
+    public function search($mots = null, $category = null){
+        $query = $this->createQueryBuilder('a');
+        $query->where('a.id = :id');
+        if($mots != null){
+            $query->andWhere('MATCH_AGAINST(a.nom, a.description) AGAINST(:mots boolean)>0')
+                ->setParameter('mots', $mots);
+        }
+
+        if($category != null){
+            $query->leftJoin('a.category', 'c');
+            $query->andWhere('c.id = :id')->setParameter('id',$category);
+        }
+
+        return $query->getQuery()->getResult(); 
+    }
+
     public function add(Produit $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
