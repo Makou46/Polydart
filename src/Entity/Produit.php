@@ -73,6 +73,11 @@ class Produit
      */
     private $Transaction;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $active;
+
   
 
     public function __toString()
@@ -219,6 +224,18 @@ class Produit
     public function setImageFile($imageFile)
     {
         $this->imageFile = $imageFile;
+
+        return $this;
+    }
+
+    public function isActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    public function setActive(bool $active): self
+    {
+        $this->active = $active;
 
         return $this;
     }

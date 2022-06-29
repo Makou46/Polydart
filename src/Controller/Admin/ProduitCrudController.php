@@ -11,6 +11,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 
 class ProduitCrudController extends AbstractCrudController
 {
@@ -28,6 +29,9 @@ class ProduitCrudController extends AbstractCrudController
             IntegerField::new('prix'),
             TextareaField::new('imageFile')
             ->setFormType(VichImageType::class),
+            BooleanField::new('active')
+            ->renderAsSwitch(true)
+            ->setLabel('active'),
             AssociationField::new('category'),
             AssociationField::new('serie'),
         ];
