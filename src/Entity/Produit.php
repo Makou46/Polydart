@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
@@ -77,6 +78,12 @@ class Produit
      * @ORM\Column(type="boolean")
      */
     private $active;
+
+    /**
+     * @ORM\Column(type="string", length=100, unique=true)
+     * @Gedmo\Slug(fields={"nom"})
+     */
+    private $slug;
 
   
 
@@ -236,6 +243,26 @@ class Produit
     public function setActive(bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of slug
+     */ 
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set the value of slug
+     *
+     * @return  self
+     */ 
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
 
         return $this;
     }
