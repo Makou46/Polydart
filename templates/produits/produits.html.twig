@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProduitsController!{% endblock %}
+{% block title %}Nos produits{% endblock %}
 
 {% block body %}
 
@@ -27,11 +27,12 @@
 
 <section>
     <div class="mt-5 mb-5 titre-h3">
-        <h2>Lorem ipsum dolor sit amet </h2>
+        <h2>Recherchez une oeuvre </h2>
     </div>
 
-    {{ form(form) }}
+    
     <div class="container">
+        {{ form(form) }}
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"

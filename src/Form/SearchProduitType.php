@@ -15,14 +15,7 @@ class SearchProduitType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('mots', SearchType::class,[
-                'label' => false,
-                'attr' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'Entrez un ou plusieurs mots-clés',
-                ],
-                'required'=> false,
-            ])
+            
 
             ->add('category', EntityType::class,[
                 'label' => false,

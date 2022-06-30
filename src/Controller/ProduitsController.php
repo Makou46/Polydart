@@ -26,7 +26,7 @@ class ProduitsController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             // On recherche les produits correspondant aux mots clé
             $produits = $produitRepository->search(
-                $search->get('mots')->getData(),
+               
                 $search->get('category')->getData());
         }
 

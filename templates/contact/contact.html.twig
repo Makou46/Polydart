@@ -4,6 +4,22 @@
 
 {% block body %}
 
+{% for message in app.flashes('success') %}
+  <div class="success " role="success">{{ message }}</div>
+{% endfor %}
+
+
+
+{{form_start(form)}}
+{{ form_widget(form.prenom) }}  
+{{ form_widget(form.nom) }}  
+{{ form_widget(form.adresse) }}  
+{{ form_widget(form.email) }}  
+{{ form_widget(form.ville) }}  
+{{ form_widget(form.pays) }}
+{{ form_widget(form.message) }}    
+{{form_end(form)}}
+
 
 <div class="mt-5 mb-5 titre-h3">
     <h2>Prendre contact</h2>
@@ -21,7 +37,7 @@
       </div>
       <div class="col-12">
         <label for="inputAddress" class="form-label">Adresse</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 rue">
       </div>
       <div class="col-12">
         <label for="inputAddress2" class="form-label">Email</label>
@@ -34,7 +50,7 @@
       <div class="col-md-4">
         <label for="inputState" class="form-label">Pays</label>
         <select id="inputState" class="form-select">
-          <option selected>Choose...</option>
+          <option selected>Choisir</option>
           <option>France</option>
           <option>Belgique</option>
         </select>

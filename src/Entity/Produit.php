@@ -52,7 +52,7 @@ class Produit
     /**
      * @var mixed
     * @Assert\File(
-     *     maxSize = "1024k",
+     *     maxSize = "2000k",
      *     mimeTypes = {"image/jpeg", "image/png"}
      * )
      * @Vich\UploadableField(mapping="products", fileNameProperty="images")

@@ -25,13 +25,10 @@ class ProduitRepository extends ServiceEntityRepository
      * Recherche les annonces en fonction du formulaire
      * @return void
      */
-    public function search($mots = null, $category = null){
+    public function search($category = null){
         $query = $this->createQueryBuilder('a');
         $query->where('a.active = 1');
-        if($mots != null){
-            $query->andWhere('MATCH_AGAINST(a.nom, a.description) AGAINST(:mots boolean)>0')
-                ->setParameter('mots', $mots);
-        }
+        
 
         if($category != null){
             $query->leftJoin('a.category', 'c');
