@@ -30,9 +30,22 @@
           <h3>{{ produits.prix|raw }}€ TTC</h3>
         </div>
        
+       <form action="" method="POST">
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_51LFddiGNPyMgbgU7vU9pebr0m58sTIHZKBQds5Xjv8hZj61unYC6kERVz0jUo53RiLfDKN5aMEu8ZGaCLSwULjDg00qHbPcYbZ"
+                        data-amount="{{ produits.prix * 100}}"
+                        data-name="{{ produits.nom }}"
+                        data-description="{{ produits.description|raw }}"
+                        data-image="{{ asset('images/products/logo.png') }}"
+                        data-locale="auto">
+                    </script>
+                </form>
         <div class="btn"><a href="#">COMMANDER</a></div>
       </div>
     </div>
+
+    
   </section>
 
 
