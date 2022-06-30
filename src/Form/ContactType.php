@@ -18,21 +18,48 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('prenom', TextType::class)
-            ->add('nom', TextType::class)
-            ->add('adresse', TextType::class)
-            ->add('email', TextType::class)
-            ->add('ville', TextType::class)
+            ->add('prenom', TextType::class,[
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'Prénom',
+            ]])
+            ->add('nom', TextType::class,[
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'nom',
+            ]])
+            ->add('adresse', TextType::class,[
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'adress',
+            ]])
+            ->add('email', TextType::class,[
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'email',
+            ]])
+            ->add('ville', TextType::class,[
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'Ville',
+            ]])
             ->add('pays', ChoiceType::class,[
+                'attr' => [
+                    'class' => 'form-control',],
                 'choices'  => [
                     'France' => null,
                     'Belgique' => true,
                     'Autres' => false,
-                ],
-            ]
-            )
-            ->add('message', TextareaType::class)
-            ->add('envoyer', SubmitType::class)
+                ]])
+            ->add('message', TextareaType::class,[
+                'attr' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'Votre message',
+            ]])
+            ->add('envoyer', SubmitType::class,[
+                'attr' => [
+                    'class' => ' btn-contact ',
+            ]])
 
         ;
     }

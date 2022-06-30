@@ -11,14 +11,13 @@
 
 
 {{form_start(form)}}
-{{ form_widget(form.prenom) }}  
-{{ form_widget(form.nom) }}  
-{{ form_widget(form.adresse) }}  
-{{ form_widget(form.email) }}  
-{{ form_widget(form.ville) }}  
-{{ form_widget(form.pays) }}
-{{ form_widget(form.message) }}    
-{{form_end(form)}}
+ 
+
+ 
+
+
+  
+
 
 
 <div class="mt-5 mb-5 titre-h3">
@@ -28,43 +27,46 @@
   <div class="container">
     <form class="row g-3">
       <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Prénom</label>
-        <input type="email" class="form-control" id="inputEmail4">
+        <label for="exampleFormControlTextarea1" class="form-label">Prénom</label>
+        {{ form_widget(form.prenom) }} 
+        
       </div>
       <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Nom</label>
-        <input type="password" class="form-control" id="inputPassword4">
+        <label for="exampleFormControlTextarea1" class="form-label">Nom</label>
+        {{ form_widget(form.nom) }}  
+        
       </div>
       <div class="col-12">
-        <label for="inputAddress" class="form-label">Adresse</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 rue">
+        <label for="exampleFormControlTextarea1" class="form-label">adresse</label>
+        {{ form_widget(form.adresse) }} 
+       
       </div>
       <div class="col-12">
-        <label for="inputAddress2" class="form-label">Email</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="exemple@gmail.com">
+        <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+        {{ form_widget(form.email) }}  
+       
       </div>
       <div class="col-md-6">
-        <label for="inputCity" class="form-label">Ville</label>
-        <input type="text" class="form-control" id="inputCity">
+        <label for="exampleFormControlTextarea1" class="form-label">Ville</label>
+        {{ form_widget(form.ville) }}  
+        
       </div>
       <div class="col-md-4">
-        <label for="inputState" class="form-label">Pays</label>
-        <select id="inputState" class="form-select">
-          <option selected>Choisir</option>
-          <option>France</option>
-          <option>Belgique</option>
-        </select>
+        <label for="exampleFormControlTextarea1" class="form-label">Pays</label>
+        {{ form_widget(form.pays) }}
       </div>
 
       <div class="col-12">
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Votre Message...</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          {{ form_widget(form.message) }} 
         </div>
       </div>
       <div class="col-12">
-        <button type="button" class="btn mt-5 mb-5"><a href="./payement.html">Envoyer</a></button>
+        {{form_end(form)}} 
+        
       </div>
     </form>
+    
   </div>
 {% endblock %}

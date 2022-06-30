@@ -27,6 +27,7 @@ class RegistrationFormType extends AbstractType
                 'label' => "Email",
                 'attr' => [
                     'autocomplete' => 'email',
+                    'class' => 'form-control',
                 ],
                 'constraints' => [
                     new NotBlank([
@@ -41,6 +42,7 @@ class RegistrationFormType extends AbstractType
                 'label' => "Prénom",
                 'attr' => [
                     'autocomplete' => 'prenom',
+                    'class' => 'form-control',
                 ],
                 'constraints' => [
                     new NotBlank([
@@ -55,6 +57,7 @@ class RegistrationFormType extends AbstractType
                     'label' => "Nom",
                     'attr' => [
                         'autocomplete' => 'nom',
+                        'class' => 'form-control',
                     ],
                     'constraints' => [
                         new NotBlank([
@@ -69,6 +72,7 @@ class RegistrationFormType extends AbstractType
                         'label' => "Rue",
                         'attr' => [
                             'autocomplete' => 'rue',
+                            'class' => 'form-control',
                         ],
                         'constraints' => [
                             new NotBlank([
@@ -84,6 +88,7 @@ class RegistrationFormType extends AbstractType
                             'label' => "Ville",
                             'attr' => [
                                 'autocomplete' => 'ville',
+                                'class' => 'form-control',
                             ],
                             'constraints' => [
                                 new NotBlank([
@@ -99,6 +104,7 @@ class RegistrationFormType extends AbstractType
                                 'label' => "Code Postal",
                                 'attr' => [
                                     'autocomplete' => 'code_postal',
+                                    'class' => 'form-control',
                                 ],
                                 'constraints' => [
                                     new NotBlank([
@@ -106,6 +112,10 @@ class RegistrationFormType extends AbstractType
                                     ]),
                                 ],
                                 ])
+
+                                
+
+                                    
                 
                 ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -125,6 +135,7 @@ class RegistrationFormType extends AbstractType
                     'label' => "Mot de passe",
                     'attr' => [
                         'autocomplete' => 'new-password',
+                        'class' => 'form-control'
                     ],
                     'constraints' => [
                         new NotBlank([
@@ -142,6 +153,7 @@ class RegistrationFormType extends AbstractType
                     'label' => "Répétez le mot de passe",
                     'attr' => [
                         'autocomplete' => 'new-password',
+                        'class' => 'form-control'
                     ],
                 ],
             ])

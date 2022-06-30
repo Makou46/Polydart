@@ -50,3 +50,8 @@ si nous voulons utiliser Smfony UX, il faut déjà installer Webpack encore
 composer require symfony/ux-chartjs
 yarn install --force
 yarn encore dev
+
+
+Pour maildev 
+cela vas rafraichir la page pour recevoir les mails
+php bin/console messenger:consume async -vv

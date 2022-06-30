@@ -262,6 +262,18 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
+.btn-contact {
+  text-decoration: none;
+    background-color: #FFA66F;
+    color: black;
+    padding: 15px 25px 15px 25px;
+    border-radius: 30px;
+    border-color: none !important;
+    margin-bottom: 50px;
+
+}
+
 .btn a{
     text-decoration: none;
     background-color: #FFA66F;
@@ -276,7 +288,7 @@ nav {
   margin-left: 100px;
 }
 
-.btn a:hover {
+.btn-contact:hover .btn a:hover {
   background-color: #FF7878;
   transform: scale(1.1);
   transition: all 0,5;
