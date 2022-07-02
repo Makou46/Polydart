@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Produit;
 use App\Form\SearchProduitType;
+use App\Repository\CategoryRepository;
 use App\Repository\ProduitRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -51,5 +52,34 @@ class ProduitsController extends AbstractController
             'controller_name' => 'SingleProduitController',
             'produits' => $produit,
         ]);
+    }
+
+    /**
+     * @Route("/category/{category}", name="app_produits_cat")
+     */
+    public function productsByCategory($category, ProduitRepository $produitRepository, CategoryRepository $categoryRepository, Request $request): Response
+    {
+        $categoryReq = $categoryRepository->findOneBy(['nom' => $category]);
+        $produits = $produitRepository->findBy(['category' => $categoryReq]);
+
+        $form = $this->createForm(SearchProduitType::class);
+
+        $search = $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            // On recherche les produits correspondant aux mots clé
+            $produits = $produitRepository->search(
+               
+                $search->get('category')->getData());
+        }
+
+        
+
+        return $this->render('produits/produits.html.twig', [
+            'controller_name' => 'ProduitsController',
+            'produits' => $produits,
+            'form' => $form->createView()
+        ]);
+        
     }
 }
