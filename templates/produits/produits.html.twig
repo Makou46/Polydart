@@ -43,7 +43,7 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item carousel_card active">
+                <div style="flex-wrap: wrap;" class="carousel-item carousel_card active">
                     {% for produit in produits %}
                     <div class="col-md-3" style="float:left">
                         <div class="card mb-2">
@@ -64,5 +64,5 @@
     </div>
 </section>
 
-<a id="button" href="#top" class="back_to_top"><img src="./src/img/arrow-up.svg" alt="fleche"></a>
+
 {% endblock %}

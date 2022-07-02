@@ -5,12 +5,11 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" type="image" href="{{ asset('images/products/logo.png') }}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        <link rel="stylesheet" href="{{ asset('style/style.css') }}">
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         {% block stylesheets %}
-            
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
         
         {% block javascripts %}
@@ -50,7 +49,7 @@
             </div>
           </nav>
           {% block body %}{% endblock %}
-          <a id="button" href="#top" class="back_to_top"  class="fa-solid fa-arrow-up"><img  alt="fleche"></a>
+          <a id="button" href="#top" class="back_to_top"><img src="/images/products/arrow-up-solid.svg"  alt="fleche" style="width: 30px;"></a>
           <footer class="site-footer">
             <div class="container">
               <div class="row">
