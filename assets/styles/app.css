@@ -12,7 +12,7 @@
   h1 {
     font-family: Arterio;
   }
-  
+
   html, body {
     font-family: Roboto;
   }
@@ -75,9 +75,11 @@
   }
   
   .btn-principal {
-    background-color: #FFA66F;
+    /* background-color: #FFA66F; */
     justify-content: center;
   }
+
+  
   
   .titre-h2 {
     color: #fff;
@@ -277,9 +279,15 @@
     justify-content: space-between;
   }
   .btn{
-      display: flex;
+      /* display: flex; */
       align-items: center;
       justify-content: center;
+  }
+
+  .btn:hover {
+    text-decoration: none;
+    border: none;
+    border-color: transparent;
   }
   
   .btn-contact {
@@ -293,6 +301,7 @@
   
   }
   
+
   .btn a{
       text-decoration: none;
       background-color: #FFA66F;
@@ -300,6 +309,11 @@
       padding: 15px 25px 15px 25px;
       border-radius: 30px;
       transition: all 0,3;
+  }
+
+  .btn a:hover {
+    background-color: #ff5757;
+    transition: all 0.3;
   }
   
   .imageProduit {
