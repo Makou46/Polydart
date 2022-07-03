@@ -6,7 +6,8 @@
         <link rel="icon" type="image" href="{{ asset('images/products/logo.png') }}">
         <meta  name="viewport" content="width=device-width,initial-scale=1">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        
+        <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/3ccfe5f9b284739a32d58d65485b038a.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         {% block stylesheets %}
@@ -58,21 +59,17 @@
           {% block body %}{% endblock %}
           <a id="button" href="#top" class="back_to_top"><img src="/images/products/arrow-up-solid.svg"  alt="fleche" style="width: 30px;"></a>
           <footer class="site-footer">
-            <div class="container">
+            <div class="container mt-5">
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <h6>À propos</h6>
-                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent vel nisi non urna congue tempus ac id sapien. Class aptent taciti sociosqu
-                    ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque in enim eget
-                    enim consequat aliquam et sit amet sem. Quisque semper odio et eros consectetur gravida.
-                    Fusce faucibus libero accumsan tellus mattis, non fringilla augue egestas. Pellentesque
-                    imperdiet faucibus massa ut gravida. Maecenas elit purus, placerat id pharetra et, vulputate
-                    eu metus. Etiam dui risus, sollicitudin et ipsum et,
-                    venenatis maximus nisi. Sed imperdiet bibendum sollicitudin.</p>
+                  <p class="text-justify">Retrouvez les Réseaux sociaux de Polydart juste ici !
+                  
+                  Pour plus d'informations, contactez-nous via la page contact</p>
                 </div>
         
-                <div class="col-xs-6 col-md-3">
+                
+                <div class="col-xs-6 col-md-3 ">
                   <h6>Categories</h6>
                   <ul class="footer-links">
                     <li><a href="./index.html">Accueil</a></li>
@@ -87,7 +84,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2012 All Rights Reserved by
+                    <p class="copyright-text">Copyright &copy; 2012 tous les droits sont réservés.
                       <a href="#">Polydart</a>.
                       {% if is_granted('ROLE_ADMIN') %}
                       <a href="{{ path('admin') }}">Admin</a>
@@ -97,10 +94,10 @@
         
                   <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
-                      <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                      <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a class="fa-brands fa-facebook" href="https://www.facebook.com/Polydart-240701306082564/"></a></li>
+                      <li><a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                      <li><a class="instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                      <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                   </div>
                 </div>

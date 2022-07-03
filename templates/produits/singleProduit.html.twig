@@ -26,8 +26,8 @@
         <hr />
 
         <div class="price">
-          <h3>{{ produits.quantite|raw }}</h3>
-          <h3>{{ produits.prix|raw }}€ TTC</h3>
+          <h3>Stock : {{ produits.quantite|raw }}</h3>
+          <h3>prix : {{ produits.prix|raw }}€ TTC</h3>
         </div>
        
        {% if is_granted("IS_AUTHENTICATED") %}
@@ -43,7 +43,7 @@
                         
                     </script>
                 </form>
-        <div class="btn"><a href="#">COMMANDER</a></div>
+        
         {% endif %}
       </div>
     </div>
@@ -53,5 +53,5 @@
 
 
 
-<a id="button" href="#top" class="back_to_top"><img src="./src/img/arrow-up.svg" alt="fleche"></a>
+
 {% endblock %}

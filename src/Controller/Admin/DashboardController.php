@@ -63,7 +63,6 @@ class DashboardController extends AbstractDashboardController
         return [
             MenuItem::section('menu'),
             MenuItem::linkToDashboard('Dashboard', 'fa fa-bars'),
-            MenuItem::linkToCrud('Pages', 'fa fa-file-o', Pages::class),
             MenuItem::section(''), 
             MenuItem::section('Contenu'),
             MenuItem::linkToCrud('Polydart', 'fa fa-house-user', Polydart::class),
@@ -74,6 +73,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Series', 'fa fa-user', Series::class),
             MenuItem::linkToCrud('Transaction', 'fa fa-dollar-sign', Transaction::class),
             MenuItem::linkToCrud('CustomPage', 'fa fa-dollar-sign', CustomPage::class),
+            MenuItem::linkToCrud('Pages', 'fa fa-file-o', Pages::class),
             MenuItem::section(''),
             MenuItem::section('Accueil'),
             MenuItem::linkToUrl('Homepage', 'fas fa-home', $this->generateUrl('app_main')),
