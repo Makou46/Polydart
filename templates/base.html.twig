@@ -41,9 +41,16 @@
                     <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
                   </li>
                 </ul>
-                <form class="d-flex mr-5">
-                  <a class="btn a" href="{{ path('app_register') }}">Connexion</a>
-                </form>
+                                <div class="d-flex mr-5">
+
+                {% if is_granted("IS_AUTHENTICATED") %}
+                  <a class="btn a" href="{{ path('app_logout') }}">Se déconnecter de <b>{{app.user}}</b></a>
+                {% else %}
+                                  <a class="btn a" href="{{ path('app_login') }}">Connexion</a>
+                  <a class="btn a" href="{{ path('app_register') }}">Inscription</a>
+                {% endif %}
+                                </div>
+
               </div>
             </div>
           </nav>
@@ -71,6 +78,7 @@
                     <li><a href="./presentation.html">présentation</a></li>
                     <li><a href="./oeuvres.html">Oeuvres</a></li>
                     <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="{{path('show_custom_page', {'slug': 'cgu'})}}">CGU</a></li>
                   </ul>
                 </div>
                 <hr>

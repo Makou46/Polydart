@@ -30,6 +30,7 @@
           <h3>{{ produits.prix|raw }}€ TTC</h3>
         </div>
        
+       {% if is_granted("IS_AUTHENTICATED") %}
        <form action="" method="POST">
                     <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -43,6 +44,7 @@
                     </script>
                 </form>
         <div class="btn"><a href="#">COMMANDER</a></div>
+        {% endif %}
       </div>
     </div>
 

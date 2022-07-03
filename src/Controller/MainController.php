@@ -3,10 +3,10 @@
 namespace App\Controller;
 
 use App\Repository\CustomPageRepository;
+use App\Repository\PagesRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
 class MainController extends AbstractController
 {
     /**
@@ -20,11 +20,10 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/page/{url}", name="show_custom_page")
+     * @Route("/{slug}", name="show_custom_page")
      */
-    public function showCustomPage($url, CustomPageRepository $customPageRepository): Response{
-        $page = $customPageRepository->findOneBy(['url' => $url]);
-        
+    public function showCustomPage($slug, PagesRepository $customPageRepository): Response{
+        $page = $customPageRepository->findOneBy(['slug' => $slug]);
 
         return $this->render('main/page.html.twig', [
             'page' => $page

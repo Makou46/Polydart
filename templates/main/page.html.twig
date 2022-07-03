@@ -5,11 +5,11 @@
 {% block body %}
 <div class="container">
     <div class="row">
-        <h1>Polydart {{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
     </div>
 
     <div class="row">
-    <div class="col">
+    <div class="col" style="word-break: break-all;">
         {{ page.content|raw }}
     </div>  
     </div>

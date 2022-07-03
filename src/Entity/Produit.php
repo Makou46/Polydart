@@ -51,7 +51,7 @@ class Produit
 
     /**
      * @var mixed
-    * @Assert\File(
+     * @Assert\File(
      *     maxSize = "2000k",
      *     mimeTypes = {"image/jpeg", "image/png"}
      * )

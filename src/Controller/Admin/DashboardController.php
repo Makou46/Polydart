@@ -10,6 +10,7 @@ use App\Entity\Polydart;
 use App\Entity\CustomPage;
 use App\Entity\Transaction;
 use App\Entity\MessageContact;
+use App\Entity\Pages;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -62,6 +63,7 @@ class DashboardController extends AbstractDashboardController
         return [
             MenuItem::section('menu'),
             MenuItem::linkToDashboard('Dashboard', 'fa fa-bars'),
+            MenuItem::linkToCrud('Pages', 'fa fa-file-o', Pages::class),
             MenuItem::section(''), 
             MenuItem::section('Contenu'),
             MenuItem::linkToCrud('Polydart', 'fa fa-house-user', Polydart::class),
