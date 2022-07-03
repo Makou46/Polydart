@@ -20,7 +20,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/{slug}", name="show_custom_page")
+     * @Route("/page/{slug}", name="show_custom_page")
      */
     public function showCustomPage($slug, PagesRepository $customPageRepository): Response{
         $page = $customPageRepository->findOneBy(['slug' => $slug]);
